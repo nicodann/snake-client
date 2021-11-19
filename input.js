@@ -14,7 +14,13 @@ const handleUserInput =  (key) => {
     conn.write("Move: down");
   } else if (key === 'd') {
     conn.write("Move: right");
-  }
+  } else if (key === '1') {
+    conn.write("Say: I'm a snake");
+  } else if (key === '2') {
+    conn.write("Say: Hisssssss!");
+  } else if (key === '3') {
+    conn.write("Say: Get out ma way!");
+  }sss
 };
 
 const setupInput = (conn) => {
