@@ -1,5 +1,6 @@
 const net = require("net");
-const connect = function () {
+
+const connect = () => {
 
   //establishes a connection with game server
 
@@ -12,7 +13,7 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("data", (data) => {
-    console.log(data);
+    conn.write(data);
   });
 
   conn.on("connect", () => {
@@ -29,4 +30,4 @@ const connect = function () {
   return conn;
 };
 
-module.exports = {connect};
+module.exports = { connect };
