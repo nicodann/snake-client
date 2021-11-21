@@ -10,7 +10,6 @@ const connect = () => {
     port: PORT
   });
 
-  // interpret incoming data as text
   conn.setEncoding("utf8");
 
   conn.on("data", (data) => {
