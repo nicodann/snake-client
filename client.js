@@ -11,8 +11,7 @@ const connect = () => {
   conn.setEncoding(ENCODING);
 
   conn.on("data", (data) => {
-    // conn.write(data);
-    console.log(data)
+    console.log(data);
   });
 
   conn.on("connect", () => {
@@ -20,6 +19,8 @@ const connect = () => {
     conn.write(`Name: ${INITIALS}`);
   });
 
+  conn.on("error", () => {
+  });
 
   return conn;
 };
